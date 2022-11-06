@@ -10,7 +10,7 @@ public class enccapsulation {
 }
 
 class Dog {
-	private String name;    //Set private that nobody can't change value of instance var and via constructor we can assign value
+	private String name;    //Set.Set private that nobody can't change value of instance var and via constructor we can assign value
 	private String breed;
 	private int age;
 	private double weight;

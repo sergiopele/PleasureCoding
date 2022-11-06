@@ -10,8 +10,7 @@ public class arraylistHomework3 {
 		for (int i = 0; i <= 500; i++) {
 			numbers.add(i);
 		}
-		numbers.removeIf(s -> s % 2 != 0);
-		numbers.removeIf(s -> s % 5 == 0);
+		numbers.removeIf(s -> s % 2 != 0&&s % 5 == 0);
 		
 		numbers.forEach(num -> System.out.print(num + " "));
 		
