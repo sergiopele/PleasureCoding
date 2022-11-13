@@ -1,0 +1,24 @@
+TreeMap<String,String>words=new TreeMap<>();
+
+// Add elements to TreeMap
+// Custom inputs
+
+  words.put("1 item","apple");
+  words.put("2 item","banana");
+  words.put("3 item","pear");
+  words.put("4 item","tomato");
+  words.put("5 item","mango");
+  words.put("6 item","kiwi");
+
+// Get entry set of the TreeMap
+// using entrySet method
+
+  Set<Map.Entry<String,String>>key=words.entrySet();
+
+
+// For-each loop for iteration
+
+  for(Map.Entry<String,String>entrySet:key){
+    System.out.println("Key is "+entrySet.getKey()+
+                      " and values is "+entrySet.getValue());
+  }
