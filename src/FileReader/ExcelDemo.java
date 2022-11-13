@@ -13,7 +13,7 @@ public class ExcelDemo {
 		String path ="DataDocs/testData.xlsx";				//declare path of file
 		var fileinputStream = new FileInputStream(path);		//navigate to the path
 		
-		var xssfWorkbook = new XSSFWorkbook(fileinputStream);		// app to help read xlsx file
+		var xssfWorkbook = new XSSFWorkbook(fileinputStream);		// takes raw file and convert it to human readable information
 		Sheet sheet = xssfWorkbook.getSheet("Sheet1");
 		
 		//getting the information from the file (starts with 0)
