@@ -5,13 +5,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import static java.lang.System.*;
+
 
 class repl209 {
 	public static void main(String[] args) {
 		
-		List<Map<String, Object>> dataList = new LinkedList<>();
+		List<Map<String,Object>> dataList = new LinkedList<>();
 		
-		Map<String, Object> appleMap = new LinkedHashMap<>();
+		Map<String,Object> appleMap = new LinkedHashMap<>();
 		appleMap.put("Items", "Apple");
 		appleMap.put("Price", 20.00);
 		appleMap.put("Quantity", 10.0);
@@ -32,7 +34,7 @@ class repl209 {
 		
 	}
 	
-	public static List<Map<String, Object>> subTotal(List<Map<String, Object>> dataList) {
+	public static void subTotal(List<Map<String,Object>> dataList) {
 		double[] total = new double[dataList.size()];
 		int count = 0;
 		for (Map<String, Object> map : dataList) {
@@ -42,24 +44,23 @@ class repl209 {
 			map.put("SubTotal", total[count]);
 			count++;
 		}
-		return dataList;
 	}
 	
-	public static void displayList(List<Map<String, Object>> dataList) {
+	public static void displayList(List<Map<String,Object>> dataList) {
 		for (Map<String, Object> map : dataList
 		) {
-			System.out.println("Items: " + map.get("Items") + " Price: " + map.get("Price") + " Quantity: " +
+			out.println("Items: " + map.get("Items") + " Price: " + map.get("Price") + " Quantity: " +
 					map.get("Quantity") + " Subtotal: " + map.get("SubTotal") + "\n");
 			
 		}
 	}
 	
-	public static void displayTotal(List<Map<String, Object>> dataList) {
+	public static void displayTotal(List<Map<String,Object>> dataList) {
 		double total=0;
 		for (Map<String, Object> map : dataList
 		) {
 			total+=(double)map.get("SubTotal");
 		}
-		System.out.println("Your Purchase total :"+total);
+		out.println("Your Purchase total : "+total);
 	}
 }
