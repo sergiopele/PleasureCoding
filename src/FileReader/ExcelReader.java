@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
-public class ExcelReaderASMethod {
+public class ExcelReader {
 	public static ArrayList<LinkedHashMap<String, String>> read(String path) throws IOException {
 		FileInputStream fis = new FileInputStream(path);
 //that helps us to read and write data
